@@ -1,0 +1,88 @@
+package:
+  name: measurements
+  version: "0.1.1.dev67"
+
+source:
+  fn: measurements-0.1.1.dev67.tar.gz
+  url: https://pypi.python.org/packages/b6/51/524a4c77a56be35b9f227d3ced79aa016fc76a896216c296a3098b528012/measurements-0.1.1.dev67.tar.gz
+  md5: 0abfa8c7c6a2258cd9256e2ca10c7100
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # noarch_python: True
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - measurements = measurements:main
+    #
+    # Would create an entry point called measurements that calls measurements.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - setuptools
+    - setuptools_scm
+    - python
+    - numpy
+    - scipy
+    - matplotlib
+    - utillib
+
+  run:
+    - python
+    - numpy
+    - scipy
+    - matplotlib
+    - utillib
+
+test:
+  # Python imports
+  imports:
+    - measurements
+    - measurements.all
+    - measurements.all.box
+    - measurements.all.pw
+    - measurements.dop
+    - measurements.dop.box
+    - measurements.dop.pw
+    - measurements.land_sea_mask
+    - measurements.plot
+    - measurements.po4
+    - measurements.po4.woa
+    - measurements.po4.woa.data09
+    - measurements.po4.woa.data13
+    - measurements.po4.woa.plot
+    - measurements.po4.wod
+    - measurements.po4.wod.plot
+    - measurements.universal
+    - measurements.util
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/jor-/measurements
+  license: GNU General Public License v3 or later (GPLv3+)
+  summary: 'measurements functions'
+  license_family: GPL3
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
