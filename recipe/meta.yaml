@@ -15,9 +15,9 @@ build:
     noarch: python
 
 requirements:
-    build:
+    host:
+        - python >=3.2
         - setuptools >=0.8
-        - python
         - numpy
         - scipy
         - matplotlib
@@ -25,7 +25,7 @@ requirements:
         - utillib {{ OTHER_PACKAGES_REQUIRED_VERSION }}
         - overrides
     run:
-        - python
+        - python >=3.2
         - numpy
         - scipy
         - matplotlib
