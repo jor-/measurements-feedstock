@@ -22,7 +22,7 @@ requirements:
         - numpy
         - scipy
         - matplotlib
-        - matrix-decomposition >0.7
+        - matrix-decomposition >=1.0
         - utillib {{ OTHER_PACKAGES_REQUIRED_VERSION }}
         - overrides
     run:
@@ -30,7 +30,7 @@ requirements:
         - numpy
         - scipy
         - matplotlib
-        - matrix-decomposition >0.7
+        - matrix-decomposition >=1.0
         - utillib {{ OTHER_PACKAGES_REQUIRED_VERSION }}
         - overrides
 
