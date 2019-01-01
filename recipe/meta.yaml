@@ -15,16 +15,12 @@ build:
     noarch: python
 
 requirements:
+    build:
+        - git
     host:
+        - python >=3.6
         - setuptools >=0.8
         - pip >=10
-        - python >=3.6
-        - numpy
-        - scipy
-        - matplotlib
-        - matrix-decomposition >=1.0
-        - utillib {{ OTHER_PACKAGES_REQUIRED_VERSION }}
-        - overrides
     run:
         - python >=3.6
         - numpy
