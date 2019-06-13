@@ -26,7 +26,7 @@ requirements:
         - numpy
         - scipy
         - matplotlib
-        - matrix-decomposition >=1.0
+        - matrix-decomposition >=1.1
         - utillib {{ OTHER_PACKAGES_REQUIRED_VERSION }}
         - overrides
 
